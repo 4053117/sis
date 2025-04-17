@@ -2,13 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def course_form(request):
-    pass
+    return render(request, 'course_form.html')
 
 def course_list(request):
-    pass
+    return render(request, 'course_list.html')
 
 def course_enroll(request):
-    pass
+    return render(request, 'course_enroll.html')
 
 def course_delete(request):
-    pass
+    return render(request, 'course_delete.html')

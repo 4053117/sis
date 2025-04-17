@@ -55,7 +55,7 @@ ROOT_URLCONF = 'sis.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates\crud_sis'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
