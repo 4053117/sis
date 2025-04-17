@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
- <p>Form Temp</p>
+ <form action="" method="POST" autocomplete="off">
+   {% csrf_token %}
+   {{ form.as_p }}
+  <button type="submit"> Submit</button>
+  <button type="reset"> Clear</button>
+  <button type="button" onclick="location.href='../'"> Back</button>
+  </form>
 {% endblock %}
