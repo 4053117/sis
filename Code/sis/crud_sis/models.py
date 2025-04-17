@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 class Instructor(models.Model):
-    id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
 
@@ -15,7 +14,6 @@ class Instructor(models.Model):
         return f"{self.first_name} {self.last_name}"
 
 class Course(models.Model):
-    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
     price = models.IntegerField()
