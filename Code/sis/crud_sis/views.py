@@ -3,8 +3,8 @@ from .forms import CourseForm
 
 
 # Create your views here.
-def home():
-    return render('home.html')
+def home(request):
+    return render(request, 'home.html')
 
 def course_form(request):
     form = CourseForm()
