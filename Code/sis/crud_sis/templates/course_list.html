@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
- <p>List Temp</p>
+
+<table>
+  <thead>
+   <tr>
+    <th>Code</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Published?</th>
+    <th>Action</th>
+   </tr>
+  </thead>
+  <tbody>
+  {% for course in course_list %}
+   <tr>
+    <td>{{ course.id }}</td>
+    <td>{{ course.title }}</td>
+    <td>{{ course.description }}</td>
+    <td>{{ course.is_published }}</td>
+    <td>
+     <button type="button" onclick="location.href='../'">View</button>
+     <button type="button" onclick="location.href='../'">Delete</button>
+    </td>
+   </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
 {% endblock %}

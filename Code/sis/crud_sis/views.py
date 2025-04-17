@@ -18,8 +18,8 @@ def course_form(request):
         return redirect('./')
 
 def course_list(request):
-    context = {'courses' : Course.objects.all()}
-    return render(request, 'course_list.html')
+    context = {'course_list' : Course.objects.all()}
+    return render(request, 'course_list.html', context)
 
 def course_enroll(request):
     return render(request, 'course_enroll.html')
