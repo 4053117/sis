@@ -9,7 +9,9 @@
     <th>Title</th>
     <th>Description</th>
     <th>Published?</th>
-    <th>Action</th>
+    if (user.role != 'Student') {
+     <th>Action</th>
+    }
    </tr>
   </thead>
   <tbody>
@@ -19,10 +21,10 @@
     <td>{{ course.title }}</td>
     <td>{{ course.description }}</td>
     <td>{{ course.is_published }}</td>
-    <td>
-     <button type="button" onclick="location.href='../'">View</button>
-     <button type="button" onclick="location.href='../'">Delete</button>
-    </td>
+     <td>
+      <button type="button" onclick="location.href='../'">View</button>
+      if (user.role != 'Student') {<button type="button" onclick="location.href='../'">Delete</button>}
+     </td>
    </tr>
   {% endfor %}
   </tbody>
