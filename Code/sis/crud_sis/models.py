@@ -4,8 +4,8 @@ from django.db import models
 
 class Instructor(models.Model):
     id = models.AutoField(primary_key=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
 
     class Meta:
         ordering = ['last_name']
@@ -28,3 +28,16 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
+
+class Student(models.Model):
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    email = models.EmailField()
+    courses = models.ManyToManyField(Course)
+
+    class Meta:
+        ordering = ['last_name']
+        permissions = []
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
